@@ -8,66 +8,86 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div id="title">Etch-A-Sketch</div>
-        <div id="sketchboardBg" style="outline: 2px solid">
-            <div id="sketchboard"></div>
+        <div id="whole">
+
+            <div id="sketchboardContainer">
+                <div id="title">Etch-A-Sketch</div>
+                <div id="sketchboardBg">
+                <div id="sketchboard"></div>
+            </div>
         </div>
-        <div id="toolbar">
-            <div class="navgroup">
-                <div id="brushColor">
-                    <img src="img/brush.png" id="brush" />
-                    <input
+        <div id="toolbarContainer">
+            <div id="title">&nbsp;</div>
+            <div id="toolbar">
+                <div class="navgroup">
+                    <div id="brushColor">
+                        <img src="img/brush.png" id="brush" />
+                        <input
                         type="color"
-                        id="colorPicker"
-                        style="margin-top: 3px"
-                    />
-                </div>
-                <div id="brushOpacity">
-                    Opacity: <input id="opacity" placeholder="100" /> %
-                    <input id="opacitySlider" type="range" min="0" max="100" />
-                </div>
-                <div id="rainbowBrush">
-                    Rainbow:
-                    <div id="rainbowState">
-                        <div style="display: flex">
-                            <div id="rainbowOff">Off</div>
-                            <div style="border-left: 1px solid grey"></div>
-                            <div id="rainbowOn">On</div>
+                            id="colorPicker"
+                            style="margin-top: 3px"
+                        />
+                    </div>
+                    <div id="brushOpacity">
+                        Opacity: <input id="opacity" placeholder="100" /> %
+                        <input
+                            id="opacitySlider"
+                            type="range"
+                            min="0"
+                            max="100"
+                        />
+                    </div>
+                    <div id="rainbowBrush">
+                        Rainbow:
+                        <div id="rainbowState">
+                            <div style="display: flex">
+                                <div id="rainbowOff">Off</div>
+                                <div style="border-left: 1px solid grey"></div>
+                                <div id="rainbowOn">On</div>
+                            </div>
                         </div>
                     </div>
+                    <div class="groupTitle">Brush</div>
                 </div>
-                <div class="groupTitle">Brush</div>
-            </div>
-            <div class="navgroup">
-                <div id="eraser">
-                    <img src="img/eraser.png" style="height: 50px" />
-                </div>
-                <div id="clear">
-                    <img
-                        src="img/clear.png"
-                        style="height: 40px; padding: 20px"
-                    />
-                </div>
-                <div class="groupTitle">Eraser</div>
-            </div>
-            <div class="navgroup">
-                <input type="color" id="canvasColorPicker" value="#FFFFFF" />
-                <div class="groupTitle">Background</div>
-            </div>
-            <div class="navgroup">
-                <div id="clear">
-                    <img src="img/pixels.png" style="height: 70px" />
-                    <div id="gridSize" style="margin-top: 10px; padding: 5px">
-                        16 x 16
+                <div class="navgroup" style="display: flex;flex-direction: column;align-items: center;">
+                    <div id="eraser">
+                        <img src="img/eraser.png" style="height: 30px; padding: 10px;" />
                     </div>
+                    <div id="clear">
+                        <img
+                        src="img/clear.png"
+                            style="height: 30px; padding:10px"
+                        />
+                    </div>
+                    <div class="groupTitle">Eraser</div>
                 </div>
-                <input id="gridSlider" type="range" min="1" max="100" />
+                <div class="navgroup">
+                    <input
+                        type="color"
+                        id="canvasColorPicker"
+                        value="#FFFFFF"
+                        />
+                        <div class="groupTitle" style="margin-top: 10px;">Background</div>
+                </div>
+                <div class="navgroup">
+                    <div style=" margin-top: 5px;">
+                        <img src="img/pixels.png" style="height: 50px; margin-top: 5px" ;/>
+                        <div
+                            id="gridSize"
+                            style="margin-top: 0px; padding: 5px"
+                        >
+                            16 x 16
+                        </div>
+                    </div>
+                    <input id="gridSlider" type="range" min="1" max="100" />
 
-                <div class="groupTitle">Grid</div>
+                    <div class="groupTitle">Grid</div>
+                </div>
             </div>
         </div>
+        </div>
         <footer
-            style="
+        style="
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -77,7 +97,7 @@
                 gap: 10px;
                 width: 100%;
                 padding: 10px;
-            "
+                "
         >
             Copyright © 2023 ShiblySohaib
             <a href="https://github.com/ShiblySohaib">
