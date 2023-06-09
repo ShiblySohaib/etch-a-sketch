@@ -175,14 +175,8 @@ setGrid(boxCount);
 canvasColorPicker.oninput = (e) => {
     bgColor = e.target.value;
     sketchboardBg.style.backgroundColor = bgColor;
-    boxes.forEach((box) => {
-        box.style.backgroundColor = bgColor;
-        box.style.opacity = 1;
-    });
-    brush.style.opacity = "30%";
-    eraser.style.opacity = "100%";
-    penColor = colorPicker.value;
-    eraserMode = false;
+    console.log(sketchboard.style.backgroundColor);
+    brushOn();
 };
 
 clear.onclick = () => {
